@@ -1,0 +1,471 @@
+{
+	"info": {
+		"_postman_id": "fcecc448-7a2f-4a18-8bac-09fc86830d1f",
+		"name": "vekelz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17294023"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create users Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/F:/6363fba4ab2c2f94f3ac9f37.jpeg"
+								},
+								{
+									"key": "users[0][id]",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "users[0][firstName]",
+									"value": "f1",
+									"type": "text"
+								},
+								{
+									"key": "users[0][lastName]",
+									"value": "ff",
+									"type": "text"
+								},
+								{
+									"key": "users[0][email]",
+									"value": "a@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "users[0][phone]",
+									"value": "01155210037",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/user/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\":12,\r\n        \"firstName\":\"john\",\r\n        \"lastName\":\"aref\",\r\n        \"email\": \"john@email.com\",\r\n        \"phone\":\"1234\",\r\n        \"image\": \"hi\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user?page=1&limit=100",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete users Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 59\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user by id Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "new1",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "areff",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email@email.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "011213413",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/DreamOnline/Desktop/65452ed8-dc28-405d-841d-2845747dac29.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/user/59",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/59",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/59",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"59"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "create car Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cars[0][id]",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][carMake]",
+									"value": "tesla",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][carModel]",
+									"value": "FAS",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][color]",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][userId]",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][images][0][id]",
+									"value": "49",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][images][0][image]",
+									"type": "file",
+									"src": "/C:/Users/DreamOnline/Downloads/WhatsApp Image 2023-01-08 at 3.32.31 PM.jpeg"
+								},
+								{
+									"key": "cars[0][images][1][id]",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "cars[0][images][1][image]",
+									"type": "file",
+									"src": "/F:/6363fba4ab2c2f94f3ac9f37.jpeg"
+								},
+								{
+									"key": "cars[1][id]",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "cars[1][carMake]",
+									"value": "hondai",
+									"type": "text"
+								},
+								{
+									"key": "cars[1][carModel]",
+									"value": "updatedModel",
+									"type": "text"
+								},
+								{
+									"key": "cars[1][color]",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "cars[1][userId]",
+									"value": "58",
+									"type": "text"
+								},
+								{
+									"key": "cars[1][images][0][id]",
+									"value": "141",
+									"type": "text"
+								},
+								{
+									"key": "cars[1][images][0][image]",
+									"type": "file",
+									"src": "/C:/Users/DreamOnline/Downloads/WhatsApp Image 2023-01-08 at 3.32.23 PM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/car",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cars Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/car",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cars by id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/car/12",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"car",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cars Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\":12\r\n    },\r\n    {\r\n        \"id\":16\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/car",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cars by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/car/16",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"car",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_car Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "carMake",
+									"value": "hondai",
+									"type": "text"
+								},
+								{
+									"key": "carModel",
+									"value": "updatedModel",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "58",
+									"type": "text"
+								},
+								{
+									"key": "images[0][id]",
+									"value": "141",
+									"type": "text"
+								},
+								{
+									"key": "images[0][image]",
+									"type": "file",
+									"src": "/C:/Users/DreamOnline/Downloads/WhatsApp Image 2023-01-08 at 3.32.31 PM.jpeg"
+								},
+								{
+									"key": "images[1][id]",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "images[1][image]",
+									"type": "file",
+									"src": "/F:/6363fba4ab2c2f94f3ac9f37.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/car/16",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"car",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
